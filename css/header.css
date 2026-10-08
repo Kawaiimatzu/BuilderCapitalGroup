@@ -511,3 +511,9 @@
     border-color: #ffffff;
     color: #1b2922;
 }
+
+#site-header.scrolled .header-contact:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #1b2922;
+}

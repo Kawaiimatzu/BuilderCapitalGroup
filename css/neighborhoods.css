@@ -92,20 +92,34 @@
 
     padding: 38px 34px;
 
-    background: var(--cream);
+    background: #18352D;
+    color: #ffffff;
 
     transition:
         background 0.3s ease,
-        transform 0.3s ease;
+        color 0.3s ease;
 }
 
 .neighborhood-card:hover {
-    background: var(--white);
+    background: #ffffff;
+    transform: none;
+    box-shadow: none;
+}
 
-    transform: translateY(-4px);
+.neighborhood-card:hover h3 {
+    color: #18352D;
+}
 
-    box-shadow:
-        0 18px 45px rgba(3, 26, 19, 0.10);
+.neighborhood-card:hover p {
+    color: #18352D;
+}
+
+.neighborhood-card:hover .neighborhood-number {
+    color: #18352D;
+}
+
+.neighborhood-card:hover .neighborhood-link {
+    color: #18352D;
 }
 
 .neighborhood-card-content {
@@ -127,18 +141,18 @@
 
     letter-spacing: 0.16em;
 
-    color: var(--gold);
+    color: #B8C9C0;
 }
 
 .neighborhood-card h3 {
     margin: 0 0 14px;
 
     font-family: "Playfair Display", serif;
-    font-size: 34px;
+    font-size: 38px;
     line-height: 1.15;
     font-weight: 500;
 
-    color: var(--navy);
+    color: #ffffff;
 }
 
 .neighborhood-card p {
@@ -147,10 +161,10 @@
     margin: 0;
 
     font-family: "Manrope", sans-serif;
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
 
-    color: var(--text-muted);
+    color: #E8EEE9;
 }
 
 .neighborhood-link {
@@ -169,7 +183,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
 
-    color: var(--navy);
+    color: #ffffff;
 
     transition:
         color 0.25s ease,
@@ -177,7 +191,7 @@
 }
 
 .neighborhood-link:hover {
-    color: var(--emerald-light);
+    color: #ffffff;
     gap: 15px;
 }
 
