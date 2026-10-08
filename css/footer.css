@@ -1,0 +1,378 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+#site-footer {
+    width: 100%;
+
+    padding: 70px 0 30px;
+
+    background: var(--navy-dark);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER INNER
+========================================= */
+
+.footer-inner {
+    width: min(
+        1180px,
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   FOOTER TOP
+========================================= */
+
+.footer-top {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-logo {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+}
+
+.footer-logo-name {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    font-weight: 500;
+}
+
+.footer-logo-subtitle {
+    margin-top: 5px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: 0.34em;
+
+    text-transform: uppercase;
+}
+
+.footer-description {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================
+   FOOTER HEADINGS
+========================================= */
+
+.footer-heading {
+    margin-bottom: 20px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   FOOTER NAV
+========================================= */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-link {
+    width: fit-content;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    transition:
+        color 0.25s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER CONTACT
+========================================= */
+
+.footer-contact-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.footer-contact-item {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+a.footer-contact-item {
+    width: fit-content;
+
+    transition:
+        color 0.25s ease;
+}
+
+a.footer-contact-item:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.footer-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 25px;
+}
+
+.footer-social-link {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-social-link:hover {
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: var(--navy);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    padding-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-copyright {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.05em;
+
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.footer-legal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.footer-legal-link {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    transition:
+        color 0.25s ease;
+}
+
+.footer-legal-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #site-footer {
+        padding: 60px 0 25px;
+    }
+
+    .footer-inner {
+        width: calc(100% - 60px);
+    }
+
+    .footer-top {
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #site-footer {
+        padding: 55px 0 25px;
+    }
+
+    .footer-inner {
+        width: calc(100% - 40px);
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        max-width: 500px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .footer-inner {
+        width: calc(100% - 30px);
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+    }
+
+}

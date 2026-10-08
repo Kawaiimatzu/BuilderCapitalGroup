@@ -1,0 +1,452 @@
+/* =========================================
+   NEIGHBORHOODS
+========================================= */
+
+#neighborhoods {
+    width: 100%;
+    padding: 120px 0;
+    background: var(--white);
+    color: var(--text);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.neighborhoods-inner {
+    width: min(
+        var(--max-width),
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.neighborhoods-heading {
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+.neighborhoods-eyebrow {
+    margin-bottom: 16px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.neighborhoods-title {
+    max-width: 700px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.neighborhoods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.neighborhood-card {
+    display: block;
+    overflow: hidden;
+
+    background: var(--cream);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.neighborhood-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(3, 26, 19, 0.12);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.neighborhood-image-wrap {
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+
+    background: var(--navy);
+
+    border-radius: 90px 90px 0 0;
+}
+
+.neighborhood-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.neighborhood-card:hover .neighborhood-image {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.neighborhood-content {
+    position: relative;
+
+    min-height: 150px;
+
+    padding: 28px 30px 32px;
+
+    background: var(--white);
+}
+
+.neighborhood-number {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    color: var(--gold);
+}
+
+.neighborhood-content h3 {
+    padding-right: 45px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+.neighborhood-arrow {
+    position: absolute;
+
+    right: 30px;
+    bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+
+    color: var(--navy);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.neighborhood-card:hover .neighborhood-arrow {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.neighborhoods-cta {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 45px;
+}
+
+.neighborhoods-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--navy);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.neighborhoods-link span {
+    font-size: 16px;
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.neighborhoods-link:hover {
+    color: var(--gold);
+}
+
+.neighborhoods-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   SLIDER SUPPORT
+========================================= */
+
+#neighborhoods-track {
+    display: flex;
+    gap: 28px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+#neighborhoods-track::-webkit-scrollbar {
+    display: none;
+}
+
+#neighborhoods-track .neighborhood-card {
+    flex: 0 0 calc((100% - 56px) / 3);
+
+    scroll-snap-align: start;
+}
+
+
+/* =========================================
+   NAVIGATION ARROWS
+========================================= */
+
+.neighborhood-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.neighborhood-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--white);
+
+    color: var(--navy);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.neighborhood-control:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #neighborhoods {
+        padding: 100px 0;
+    }
+
+    .neighborhoods-inner {
+        width: calc(100% - 60px);
+    }
+
+    .neighborhoods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .neighborhood-image-wrap {
+        height: 320px;
+    }
+
+    #neighborhoods-track .neighborhood-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #neighborhoods {
+        padding: 85px 0;
+    }
+
+    .neighborhoods-inner {
+        width: calc(100% - 40px);
+    }
+
+    .neighborhoods-heading {
+        margin-bottom: 40px;
+    }
+
+    .neighborhoods-title {
+        font-size: clamp(38px, 10vw, 54px);
+    }
+
+    .neighborhoods-grid {
+        display: flex;
+
+        gap: 20px;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .neighborhoods-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .neighborhoods-grid .neighborhood-card {
+        flex: 0 0 82%;
+
+        scroll-snap-align: start;
+    }
+
+    .neighborhood-image-wrap {
+        height: 340px;
+    }
+
+    #neighborhoods-track .neighborhood-card {
+        flex: 0 0 82%;
+    }
+
+    .neighborhoods-cta {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #neighborhoods {
+        padding: 70px 0;
+    }
+
+    .neighborhoods-inner {
+        width: calc(100% - 30px);
+    }
+
+    .neighborhood-image-wrap {
+        height: 300px;
+
+        border-radius: 65px 65px 0 0;
+    }
+
+    .neighborhood-content {
+        min-height: 135px;
+
+        padding: 24px 24px 28px;
+    }
+
+    .neighborhood-content h3 {
+        font-size: 24px;
+    }
+
+    .neighborhood-arrow {
+        right: 24px;
+        bottom: 28px;
+    }
+
+}

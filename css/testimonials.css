@@ -1,0 +1,465 @@
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+#testimonials {
+    position: relative;
+
+    width: 100%;
+    min-height: 720px;
+
+    padding: 125px 0 115px;
+
+    background:
+        linear-gradient(
+            rgba(3, 26, 19, 0.96),
+            rgba(3, 26, 19, 0.96)
+        ),
+        url("../assets/images/testimonials/testimonials-bg.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   INNER
+========================================= */
+
+.testimonials-inner {
+    width: min(
+        1050px,
+        calc(100% - 80px)
+    );
+
+    min-height: 480px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.testimonials-eyebrow {
+    margin-bottom: 18px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.testimonials-title {
+    margin-bottom: 75px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1;
+    font-weight: 500;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.testimonial-slider {
+    position: relative;
+
+    width: 100%;
+    min-height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   SLIDE
+========================================= */
+
+.testimonial-slide {
+    display: none;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    opacity: 0;
+}
+
+.testimonial-slide.active {
+    display: block;
+
+    animation: testimonialFadeIn 0.45s ease forwards;
+}
+
+
+@keyframes testimonialFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.testimonial-quote {
+    max-width: 900px;
+
+    margin: 0 auto 30px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 2.5vw, 31px);
+    line-height: 1.55;
+    font-weight: 400;
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.94);
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.testimonial-name {
+    margin-top: 25px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 70px;
+}
+
+
+/* =========================================
+   PREVIOUS / NEXT BUTTON
+========================================= */
+
+#testimonial-prev,
+#testimonial-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+#testimonial-prev:hover,
+#testimonial-next:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+
+    color: var(--navy);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+.testimonial-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.testimonial-number {
+    position: relative;
+
+    padding: 4px 0;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    line-height: 1.5;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.testimonial-number:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.testimonial-number.active {
+    color: var(--gold-light);
+}
+
+.testimonial-number.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================
+   VIEW ALL LINK
+========================================= */
+
+.testimonials-more {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 50px;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--white);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.testimonials-more:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #testimonials {
+        min-height: 650px;
+
+        padding: 105px 0 95px;
+    }
+
+    .testimonials-inner {
+        width: calc(100% - 60px);
+    }
+
+    .testimonials-title {
+        margin-bottom: 60px;
+    }
+
+    .testimonial-quote {
+        max-width: 760px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #testimonials {
+        min-height: 620px;
+
+        padding: 85px 0 80px;
+    }
+
+    .testimonials-inner {
+        width: calc(100% - 40px);
+        min-height: 450px;
+    }
+
+    .testimonials-title {
+        margin-bottom: 50px;
+
+        font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .testimonial-slider {
+        min-height: 230px;
+    }
+
+    .testimonial-quote {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .testimonial-controls {
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .testimonial-numbers {
+        gap: 12px;
+    }
+
+    .testimonial-number {
+        font-size: 8px;
+    }
+
+    #testimonial-prev,
+    #testimonial-next {
+        width: 38px;
+        height: 38px;
+    }
+
+    .testimonials-more {
+        margin-top: 38px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #testimonials {
+        padding: 75px 0 70px;
+    }
+
+    .testimonials-inner {
+        width: calc(100% - 30px);
+    }
+
+    .testimonials-eyebrow {
+        font-size: 9px;
+    }
+
+    .testimonials-title {
+        margin-bottom: 40px;
+
+        font-size: 40px;
+    }
+
+    .testimonial-slider {
+        min-height: 250px;
+    }
+
+    .testimonial-quote {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .testimonial-controls {
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .testimonial-numbers {
+        gap: 8px;
+    }
+
+    #testimonial-prev,
+    #testimonial-next {
+        width: 35px;
+        height: 35px;
+    }
+
+    .testimonials-more {
+        margin-top: 30px;
+        font-size: 9px;
+    }
+
+}

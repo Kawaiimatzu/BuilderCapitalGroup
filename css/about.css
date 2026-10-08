@@ -1,0 +1,418 @@
+/* =========================================
+   ABOUT / MEET PAUL
+========================================= */
+
+#about {
+    position: relative;
+
+    padding: 120px 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ABOUT INNER
+========================================= */
+
+.about-inner {
+    width: min(
+        1180px,
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.85fr);
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   ABOUT CONTENT
+========================================= */
+
+.about-content {
+    max-width: 620px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.about-eyebrow {
+    margin-bottom: 18px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.about-title {
+    margin-bottom: 30px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        64px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.about-text {
+    margin-bottom: 20px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    font-weight: 400;
+
+    color: var(--text-muted);
+}
+
+.about-text:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.about-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 34px;
+}
+
+.about-social-link {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+    background: #ffffff;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-social-link:hover {
+    background: var(--navy);
+
+    border-color: var(--navy);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--cream);
+}
+
+.about-image-wrap::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid rgba(11, 22, 37, 0.08);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.about-image {
+    width: 100%;
+
+    height: 620px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.about-image-wrap:hover .about-image {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #about {
+        padding: 100px 0;
+    }
+
+    .about-inner {
+        width: calc(100% - 60px);
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(340px, 0.8fr);
+
+        gap: 55px;
+    }
+
+    .about-title {
+        font-size: 48px;
+    }
+
+    .about-text {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .about-image {
+        height: 540px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #about {
+        padding: 75px 0;
+    }
+
+    .about-inner {
+        width: calc(100% - 40px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 45px;
+
+        align-items: stretch;
+    }
+
+    .about-content {
+        max-width: none;
+    }
+
+    .about-eyebrow {
+        margin-bottom: 14px;
+    }
+
+    .about-title {
+        margin-bottom: 24px;
+
+        font-size: 42px;
+    }
+
+    .about-text {
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        margin-bottom: 17px;
+    }
+
+    .about-social {
+        margin-top: 28px;
+    }
+
+    .about-image-wrap {
+        width: 100%;
+    }
+
+    .about-image {
+        height: 480px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #about {
+        padding: 65px 0;
+    }
+
+    .about-inner {
+        width: calc(100% - 30px);
+
+        gap: 35px;
+    }
+
+    .about-title {
+        font-size: 37px;
+    }
+
+    .about-text {
+        font-size: 13px;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+}
+
+/* =========================================
+   HOME ABOUT ACTIONS
+========================================= */
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 14px 24px;
+    background: var(--navy);
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-button:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+.about-link {
+    position: relative;
+    padding-bottom: 5px;
+    color: var(--text);
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.about-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.about-link:hover::after {
+    transform: scaleX(0);
+}
+
+@media (max-width: 768px) {
+    .about-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

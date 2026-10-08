@@ -1,0 +1,422 @@
+/* =========================================
+   SERVICES
+========================================= */
+
+#services {
+    padding: 130px 0 110px;
+
+    background: #f8f7f3;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   INNER
+========================================= */
+
+.services-inner {
+    width: min(
+        1180px,
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.services-heading {
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.services-eyebrow {
+    margin-bottom: 16px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.services-title {
+    margin-bottom: 22px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        46px,
+        5.5vw,
+        68px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.025em;
+
+    color: var(--navy);
+}
+
+.services-intro {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1px;
+
+    background: #dcdad4;
+
+    border: 1px solid #dcdad4;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+    position: relative;
+
+    min-height: 290px;
+
+    padding: 38px 34px;
+
+    background: #ffffff;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.service-card:hover {
+    background: var(--navy);
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    z-index: 2;
+}
+
+.service-number {
+    display: block;
+
+    margin-bottom: 42px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    color: var(--gold);
+}
+
+.service-title {
+    margin-bottom: 16px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: var(--navy);
+
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+    color: #ffffff;
+}
+
+.service-text {
+    max-width: 330px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color: var(--text-muted);
+
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-text {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   ADVISORY SECTION
+========================================= */
+
+.services-advisory {
+    margin-top: 80px;
+
+    padding: 75px 70px;
+
+    background: var(--navy);
+
+    color: #ffffff;
+}
+
+.services-advisory-content {
+    max-width: 760px;
+}
+
+.services-advisory .services-eyebrow {
+    color: var(--gold-light);
+}
+
+.services-advisory-title {
+    margin-bottom: 22px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        34px,
+        4vw,
+        52px
+    );
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: #ffffff;
+}
+
+.services-advisory-text {
+    max-width: 680px;
+
+    margin-bottom: 32px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.services-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    height: 48px;
+
+    padding: 0 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.services-button:hover {
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #services {
+        padding: 105px 0 90px;
+    }
+
+    .services-inner {
+        width: calc(100% - 60px);
+    }
+
+    .services-heading {
+        margin-bottom: 55px;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card {
+        min-height: 270px;
+    }
+
+    .services-advisory {
+        margin-top: 60px;
+
+        padding: 60px 50px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #services {
+        padding: 80px 0 70px;
+    }
+
+    .services-inner {
+        width: calc(100% - 40px);
+    }
+
+    .services-heading {
+        margin-bottom: 45px;
+    }
+
+    .services-title {
+        font-size: 42px;
+    }
+
+    .services-intro {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+
+        padding: 32px 28px;
+    }
+
+    .service-number {
+        margin-bottom: 30px;
+    }
+
+    .service-title {
+        font-size: 24px;
+    }
+
+    .service-text {
+        max-width: none;
+    }
+
+    .services-advisory {
+        margin-top: 45px;
+
+        padding: 50px 30px;
+    }
+
+    .services-advisory-title {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .services-inner {
+        width: calc(100% - 30px);
+    }
+
+    .services-title {
+        font-size: 37px;
+    }
+
+    .service-card {
+        padding: 28px 24px;
+    }
+
+    .services-advisory {
+        padding: 42px 24px;
+    }
+
+    .services-advisory-title {
+        font-size: 32px;
+    }
+
+}

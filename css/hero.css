@@ -1,0 +1,237 @@
+/* =========================================
+   HERO
+========================================= */
+
+#hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--navy-dark);
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   BACKGROUND VIDEO
+========================================= */
+
+.hero-video {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3, 26, 19, 0.62) 0%,
+            rgba(3, 26, 19, 0.48) 45%,
+            rgba(3, 26, 19, 0.78) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        1100px,
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero-title {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        54px,
+        8vw,
+        118px
+    );
+
+    line-height: 0.94;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.hero-subtitle {
+    margin-top: 34px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(
+        18px,
+        2vw,
+        25px
+    );
+
+    line-height: 1.4;
+
+    font-weight: 500;
+
+    letter-spacing: 0.01em;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   TAGLINE
+========================================= */
+
+.hero-tagline {
+    margin-top: 16px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #hero {
+        min-height: 680px;
+    }
+
+    .hero-content {
+        width: calc(100% - 60px);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        width: calc(100% - 40px);
+    }
+
+    .hero-title {
+        font-size: clamp(
+            48px,
+            13vw,
+            76px
+        );
+    }
+
+    .hero-subtitle {
+        margin-top: 26px;
+
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        width: calc(100% - 30px);
+    }
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-tagline {
+        font-size: 8px;
+
+        letter-spacing: 0.18em;
+    }
+
+}

@@ -1,0 +1,370 @@
+/* =========================================
+   VIDEOS
+========================================= */
+
+#videos {
+    width: 100%;
+    padding: 120px 0;
+
+    background: var(--cream);
+    color: var(--text);
+}
+
+
+/* =========================================
+   INNER
+========================================= */
+
+.videos-inner {
+    width: min(
+        var(--max-width),
+        calc(100% - 80px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.videos-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 60px;
+}
+
+.videos-eyebrow {
+    margin-bottom: 15px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.videos-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(46px, 5vw, 70px);
+    line-height: 1.05;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   HEADING LINK
+========================================= */
+
+.videos-heading-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    color: var(--navy);
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease;
+}
+
+.videos-heading-link span {
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.videos-heading-link:hover {
+    color: var(--gold);
+}
+
+.videos-heading-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   VIDEO GRID
+========================================= */
+
+.videos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 28px;
+}
+
+
+/* =========================================
+   VIDEO CARD
+========================================= */
+
+.video-card {
+    width: 100%;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(3, 26, 19, 0.12);
+}
+
+
+/* =========================================
+   VIDEO FRAME
+========================================= */
+
+.video-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: var(--navy-dark);
+}
+
+.video-frame iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* =========================================
+   VIDEO INFO
+========================================= */
+
+.video-info {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    min-height: 105px;
+
+    padding: 25px 28px 28px;
+}
+
+.video-number {
+    flex-shrink: 0;
+
+    padding-top: 4px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    line-height: 1.5;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: var(--gold);
+}
+
+.video-info h3 {
+    max-width: 520px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    line-height: 1.25;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   BOTTOM LINK
+========================================= */
+
+.videos-bottom {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 55px;
+}
+
+.videos-bottom-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--navy);
+
+    transition:
+        color 0.25s ease;
+}
+
+.videos-bottom-link span {
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.videos-bottom-link:hover {
+    color: var(--gold);
+}
+
+.videos-bottom-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    #videos {
+        padding: 100px 0;
+    }
+
+    .videos-inner {
+        width: calc(100% - 60px);
+    }
+
+    .videos-heading {
+        margin-bottom: 45px;
+    }
+
+    .video-info h3 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #videos {
+        padding: 85px 0;
+    }
+
+    .videos-inner {
+        width: calc(100% - 40px);
+    }
+
+    .videos-heading {
+        display: block;
+
+        margin-bottom: 40px;
+    }
+
+    .videos-title {
+        font-size: clamp(42px, 10vw, 58px);
+    }
+
+    .videos-heading-link {
+        margin-top: 25px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .video-info {
+        min-height: auto;
+
+        padding: 22px 22px 25px;
+    }
+
+    .video-info h3 {
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #videos {
+        padding: 70px 0;
+    }
+
+    .videos-inner {
+        width: calc(100% - 30px);
+    }
+
+    .videos-title {
+        font-size: 40px;
+    }
+
+    .video-info {
+        gap: 14px;
+
+        padding: 20px;
+    }
+
+    .video-info h3 {
+        font-size: 21px;
+    }
+
+}
