@@ -1,13 +1,36 @@
 /* =========================================
-   CONTACT
+   CONTACT PAGE
 ========================================= */
 
 #contact {
-    padding: 130px 0 110px;
+    min-height: 100vh;
 
-    background: #f8f7f3;
+    padding: 150px 0 110px;
+
+    background: var(--cream);
 
     color: var(--navy);
+}
+
+
+/* =========================================
+   CONTACT PAGE HEADER
+   Makes fixed header visible on light page
+========================================= */
+
+body:has(#contact) #site-header {
+    background: var(--navy);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+body:has(#contact) #site-header .header-logo-name,
+body:has(#contact) #site-header .header-logo-subtitle,
+body:has(#contact) #site-header .header-link,
+body:has(#contact) #site-header .header-phone,
+body:has(#contact) #site-header .header-contact {
+    color: #ffffff;
 }
 
 
@@ -26,7 +49,7 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.85fr)
+        minmax(0, 0.9fr)
         minmax(420px, 1fr);
 
     gap: 90px;
@@ -46,12 +69,11 @@
 }
 
 .contact-eyebrow {
-    margin-bottom: 16px;
+    margin: 0 0 16px;
 
     font-family: "Manrope", sans-serif;
 
     font-size: 10px;
-
     line-height: 1.4;
 
     font-weight: 600;
@@ -64,7 +86,7 @@
 }
 
 .contact-title {
-    margin-bottom: 24px;
+    margin: 0 0 24px;
 
     font-family: "Playfair Display", serif;
 
@@ -74,7 +96,7 @@
         68px
     );
 
-    line-height: 1.05;
+    line-height: 1.04;
 
     font-weight: 500;
 
@@ -84,7 +106,9 @@
 }
 
 .contact-intro {
-    margin-bottom: 45px;
+    margin: 0 0 45px;
+
+    max-width: 510px;
 
     font-family: "Manrope", sans-serif;
 
@@ -151,14 +175,14 @@
 }
 
 .contact-detail-value:hover {
-    color: var(--gold);
+    color: var(--emerald);
 
-    border-color: var(--gold);
+    border-color: var(--emerald);
 }
 
 
 /* =========================================
-   FORM WRAP
+   FORM / PROJECT CARD
 ========================================= */
 
 .contact-form-wrap {
@@ -169,7 +193,7 @@
     border: 1px solid var(--border);
 
     box-shadow:
-        0 20px 50px rgba(11, 22, 37, 0.06);
+        0 20px 50px rgba(27, 41, 34, 0.07);
 }
 
 
@@ -182,13 +206,13 @@
 }
 
 .form-group {
-    margin-bottom: 24px;
+    margin: 0 0 24px;
 }
 
 .form-group label {
     display: block;
 
-    margin-bottom: 9px;
+    margin: 0 0 9px;
 
     font-family: "Manrope", sans-serif;
 
@@ -215,7 +239,7 @@
 .form-group select {
     width: 100%;
 
-    border: 1px solid #d9dce0;
+    border: 1px solid var(--border);
 
     border-radius: 0;
 
@@ -228,6 +252,8 @@
     font-size: 13px;
 
     line-height: 1.5;
+
+    outline: none;
 
     transition:
         border-color 0.25s ease,
@@ -251,16 +277,16 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #9aa1a8;
+    color: #9aa39d;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: var(--navy);
+    border-color: var(--emerald);
 
     box-shadow:
-        0 0 0 2px rgba(11, 22, 37, 0.05);
+        0 0 0 2px rgba(67, 81, 70, 0.08);
 }
 
 
@@ -308,6 +334,8 @@
 
     margin-top: 5px;
 
+    border: 0;
+
     background: var(--navy);
 
     color: #ffffff;
@@ -324,13 +352,15 @@
 
     text-transform: uppercase;
 
+    cursor: pointer;
+
     transition:
         background 0.25s ease,
         transform 0.25s ease;
 }
 
 .contact-submit:hover {
-    background: var(--charcoal);
+    background: var(--emerald);
 
     transform: translateY(-2px);
 }
@@ -343,7 +373,7 @@
 @media (max-width: 1024px) {
 
     #contact {
-        padding: 105px 0 90px;
+        padding: 135px 0 90px;
     }
 
     .contact-inner {
@@ -363,7 +393,6 @@
     .contact-form-wrap {
         padding: 35px;
     }
-
 }
 
 
@@ -374,7 +403,7 @@
 @media (max-width: 768px) {
 
     #contact {
-        padding: 80px 0 70px;
+        padding: 105px 0 70px;
     }
 
     .contact-inner {
@@ -406,7 +435,6 @@
     .contact-form-wrap {
         padding: 30px 25px;
     }
-
 }
 
 
@@ -415,6 +443,10 @@
 ========================================= */
 
 @media (max-width: 480px) {
+
+    #contact {
+        padding: 100px 0 60px;
+    }
 
     .contact-inner {
         width: calc(100% - 30px);
@@ -431,5 +463,4 @@
     .form-group {
         margin-bottom: 20px;
     }
-
 }

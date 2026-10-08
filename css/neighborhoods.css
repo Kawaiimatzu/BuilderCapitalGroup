@@ -1,40 +1,31 @@
 /* =========================================
-   NEIGHBORHOODS
+   HOMEPAGE — MARKETS
 ========================================= */
 
-#neighborhoods {
+.neighborhoods-section {
     width: 100%;
     padding: 120px 0;
     background: var(--white);
     color: var(--text);
 }
 
-
-/* =========================================
-   CONTAINER
-========================================= */
-
 .neighborhoods-inner {
-    width: min(
-        var(--max-width),
-        calc(100% - 80px)
-    );
-
+    width: min(var(--max-width), calc(100% - 80px));
     margin: 0 auto;
 }
 
 
 /* =========================================
-   HEADING
+   HOMEPAGE HEADING
 ========================================= */
 
-.neighborhoods-heading {
-    max-width: 720px;
+.section-heading {
+    max-width: 760px;
     margin-bottom: 60px;
 }
 
-.neighborhoods-eyebrow {
-    margin-bottom: 16px;
+.section-eyebrow {
+    margin: 0 0 16px;
 
     font-family: "Manrope", sans-serif;
     font-size: 10px;
@@ -47,104 +38,90 @@
     color: var(--gold);
 }
 
-.neighborhoods-title {
-    max-width: 700px;
+.section-heading h2 {
+    max-width: 800px;
+
+    margin: 0 0 20px;
 
     font-family: "Playfair Display", serif;
-    font-size: clamp(42px, 5vw, 72px);
+    font-size: clamp(42px, 5vw, 70px);
     line-height: 1.05;
     font-weight: 500;
 
     color: var(--navy);
 }
 
+.section-intro {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: var(--text-muted);
+}
+
 
 /* =========================================
-   GRID
+   HOMEPAGE MARKET GRID
 ========================================= */
 
 .neighborhoods-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+
+    gap: 1px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
 }
 
 
 /* =========================================
-   CARD
+   HOMEPAGE MARKET CARD
 ========================================= */
 
 .neighborhood-card {
     display: block;
-    overflow: hidden;
+
+    min-height: 330px;
+
+    padding: 38px 34px;
 
     background: var(--cream);
 
     transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 .neighborhood-card:hover {
-    transform: translateY(-6px);
+    background: var(--white);
+
+    transform: translateY(-4px);
 
     box-shadow:
-        0 18px 45px rgba(3, 26, 19, 0.12);
+        0 18px 45px rgba(3, 26, 19, 0.10);
 }
 
+.neighborhood-card-content {
+    display: flex;
+    flex-direction: column;
 
-/* =========================================
-   IMAGE
-========================================= */
-
-.neighborhood-image-wrap {
-    width: 100%;
-    height: 360px;
-
-    overflow: hidden;
-
-    background: var(--navy);
-
-    border-radius: 90px 90px 0 0;
-}
-
-.neighborhood-image {
-    width: 100%;
     height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.6s ease,
-        filter 0.6s ease;
-}
-
-.neighborhood-card:hover .neighborhood-image {
-    transform: scale(1.05);
-}
-
-
-/* =========================================
-   CARD CONTENT
-========================================= */
-
-.neighborhood-content {
-    position: relative;
-
-    min-height: 150px;
-
-    padding: 28px 30px 32px;
-
-    background: var(--white);
 }
 
 .neighborhood-number {
     display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 65px;
 
     font-family: "Manrope", sans-serif;
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.4;
     font-weight: 700;
 
@@ -153,77 +130,40 @@
     color: var(--gold);
 }
 
-.neighborhood-content h3 {
-    padding-right: 45px;
+.neighborhood-card h3 {
+    margin: 0 0 14px;
 
     font-family: "Playfair Display", serif;
-    font-size: 27px;
-    line-height: 1.2;
+    font-size: 34px;
+    line-height: 1.15;
     font-weight: 500;
 
     color: var(--navy);
 }
 
-.neighborhood-arrow {
-    position: absolute;
+.neighborhood-card p {
+    max-width: 400px;
 
-    right: 30px;
-    bottom: 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 38px;
-    height: 38px;
-
-    border: 1px solid var(--border);
-    border-radius: 50%;
+    margin: 0;
 
     font-family: "Manrope", sans-serif;
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 1.8;
 
-    color: var(--navy);
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    color: var(--text-muted);
 }
 
-.neighborhood-card:hover .neighborhood-arrow {
-    background: var(--navy);
-    border-color: var(--navy);
-    color: var(--white);
-
-    transform: translateX(3px);
-}
-
-
-/* =========================================
-   CTA
-========================================= */
-
-.neighborhoods-cta {
-    display: flex;
-    justify-content: flex-end;
-
-    margin-top: 45px;
-}
-
-.neighborhoods-link {
+.neighborhood-link {
     display: inline-flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
 
-    padding-bottom: 7px;
-
-    border-bottom: 1px solid var(--gold);
+    margin-top: auto;
+    padding-top: 28px;
 
     font-family: "Manrope", sans-serif;
-    font-size: 10px;
-    line-height: 1.5;
+    font-size: 9px;
+    line-height: 1.4;
     font-weight: 700;
 
     letter-spacing: 0.14em;
@@ -233,105 +173,22 @@
 
     transition:
         color 0.25s ease,
-        border-color 0.25s ease;
+        gap 0.25s ease;
 }
 
-.neighborhoods-link span {
-    font-size: 16px;
-    line-height: 1;
-
-    transition:
-        transform 0.25s ease;
-}
-
-.neighborhoods-link:hover {
-    color: var(--gold);
-}
-
-.neighborhoods-link:hover span {
-    transform: translateX(4px);
+.neighborhood-link:hover {
+    color: var(--emerald-light);
+    gap: 15px;
 }
 
 
 /* =========================================
-   SLIDER SUPPORT
-========================================= */
-
-#neighborhoods-track {
-    display: flex;
-    gap: 28px;
-
-    overflow-x: auto;
-
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    scrollbar-width: none;
-}
-
-#neighborhoods-track::-webkit-scrollbar {
-    display: none;
-}
-
-#neighborhoods-track .neighborhood-card {
-    flex: 0 0 calc((100% - 56px) / 3);
-
-    scroll-snap-align: start;
-}
-
-
-/* =========================================
-   NAVIGATION ARROWS
-========================================= */
-
-.neighborhood-controls {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    gap: 10px;
-
-    margin-top: 35px;
-}
-
-.neighborhood-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 44px;
-    height: 44px;
-
-    border: 1px solid var(--border);
-    border-radius: 50%;
-
-    background: var(--white);
-
-    color: var(--navy);
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.neighborhood-control:hover {
-    background: var(--navy);
-    border-color: var(--navy);
-    color: var(--white);
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   TABLET
+   HOMEPAGE TABLET
 ========================================= */
 
 @media (max-width: 1024px) {
 
-    #neighborhoods {
+    .neighborhoods-section {
         padding: 100px 0;
     }
 
@@ -341,27 +198,18 @@
 
     .neighborhoods-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-
-    .neighborhood-image-wrap {
-        height: 320px;
-    }
-
-    #neighborhoods-track .neighborhood-card {
-        flex: 0 0 calc((100% - 24px) / 2);
     }
 
 }
 
 
 /* =========================================
-   MOBILE
+   HOMEPAGE MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
 
-    #neighborhoods {
+    .neighborhoods-section {
         padding: 85px 0;
     }
 
@@ -369,46 +217,39 @@
         width: calc(100% - 40px);
     }
 
-    .neighborhoods-heading {
+    .section-heading {
         margin-bottom: 40px;
     }
 
-    .neighborhoods-title {
+    .section-heading h2 {
         font-size: clamp(38px, 10vw, 54px);
     }
 
     .neighborhoods-grid {
         display: flex;
 
-        gap: 20px;
-
         overflow-x: auto;
 
-        scroll-snap-type: x mandatory;
+        gap: 15px;
+
+        border: 0;
+        background: transparent;
+
         scrollbar-width: none;
+
+        scroll-snap-type: x mandatory;
     }
 
     .neighborhoods-grid::-webkit-scrollbar {
         display: none;
     }
 
-    .neighborhoods-grid .neighborhood-card {
+    .neighborhood-card {
         flex: 0 0 82%;
+
+        min-height: 340px;
 
         scroll-snap-align: start;
-    }
-
-    .neighborhood-image-wrap {
-        height: 340px;
-    }
-
-    #neighborhoods-track .neighborhood-card {
-        flex: 0 0 82%;
-    }
-
-    .neighborhoods-cta {
-        justify-content: flex-start;
-        margin-top: 30px;
     }
 
 }
@@ -420,7 +261,7 @@
 
 @media (max-width: 480px) {
 
-    #neighborhoods {
+    .neighborhoods-section {
         padding: 70px 0;
     }
 
@@ -428,25 +269,928 @@
         width: calc(100% - 30px);
     }
 
-    .neighborhood-image-wrap {
-        height: 300px;
+    .neighborhood-card {
+        min-height: 320px;
 
-        border-radius: 65px 65px 0 0;
+        padding: 30px 25px;
     }
 
-    .neighborhood-content {
-        min-height: 135px;
-
-        padding: 24px 24px 28px;
+    .neighborhood-number {
+        margin-bottom: 55px;
     }
 
-    .neighborhood-content h3 {
+    .neighborhood-card h3 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MARKETS PAGE — pages/neighborhoods.html
+========================================================= */
+
+.markets-hero {
+    width: 100%;
+    min-height: 620px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 150px 0 100px;
+
+    background: var(--navy);
+    color: var(--white);
+}
+
+.markets-hero-inner {
+    width: min(var(--max-width), calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.markets-hero .section-eyebrow {
+    color: var(--gold-light);
+}
+
+.markets-hero h1 {
+    max-width: 900px;
+
+    margin: 0 0 28px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 86px);
+    line-height: 1.02;
+    font-weight: 500;
+
+    color: var(--white);
+}
+
+.markets-hero p:not(.section-eyebrow) {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   MARKETS LIST
+========================================= */
+
+.markets-list {
+    width: 100%;
+
+    padding: 110px 0;
+
+    background: var(--cream);
+}
+
+.markets-list-inner {
+    width: min(var(--max-width), calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.market-item {
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 48px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+.market-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.market-number {
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    color: var(--gold);
+}
+
+.market-label {
+    margin: 0 0 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.market-content h2 {
+    margin: 0 0 14px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+.market-content p:last-child {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   MARKET BUTTON
+========================================= */
+
+.market-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    white-space: nowrap;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--navy);
+}
+
+.market-action span {
+    font-size: 17px;
+
+    transition: transform 0.25s ease;
+}
+
+.market-action:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   MARKETS CTA
+========================================= */
+
+.markets-cta {
+    padding: 120px 0;
+
+    background: var(--white);
+}
+
+.markets-cta-inner {
+    width: min(var(--max-width), calc(100% - 80px));
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.markets-cta h2 {
+    margin: 0 0 20px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    font-weight: 500;
+
+    color: var(--navy);
+}
+
+.markets-cta p:not(.section-eyebrow) {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px 24px;
+
+    background: var(--navy);
+    border: 1px solid var(--navy);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--white);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.primary-button:hover {
+    background: var(--emerald-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MARKETS RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .markets-hero {
+        min-height: 560px;
+        padding: 140px 0 85px;
+    }
+
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 60px);
+    }
+
+    .market-item {
+        grid-template-columns: 60px minmax(0, 1fr) auto;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .markets-hero {
+        min-height: 520px;
+        padding: 130px 0 70px;
+    }
+
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 40px);
+    }
+
+    .markets-hero h1 {
+        font-size: clamp(42px, 11vw, 60px);
+    }
+
+    .markets-list {
+        padding: 75px 0;
+    }
+
+    .market-item {
+        display: block;
+        padding: 38px 0;
+    }
+
+    .market-number {
+        margin-bottom: 20px;
+    }
+
+    .market-content {
+        margin-bottom: 28px;
+    }
+
+    .market-content h2 {
+        font-size: 38px;
+    }
+
+    .markets-cta {
+        padding: 85px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 30px);
+    }
+
+    .markets-hero h1 {
+        font-size: 40px;
+    }
+
+    .market-content h2 {
+        font-size: 34px;
+    }
+
+    .markets-cta h2 {
+        font-size: 40px;
+    }
+
+}
+
+/* =========================================================
+   FULL RESPONSIVE OVERRIDE
+   Desktop → Laptop → Tablet → Mobile → Small Mobile
+========================================================= */
+
+/* -----------------------------------------
+   LARGE LAPTOP / SMALL DESKTOP
+----------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 60px);
+    }
+
+    .neighborhoods-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .neighborhood-card {
+        min-height: 310px;
+        padding: 32px 28px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 30px;
+    }
+
+    .market-item {
+        gap: 30px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   LAPTOP
+----------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .neighborhoods-section {
+        padding: 100px 0;
+    }
+
+    .neighborhoods-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-heading h2 {
+        font-size: clamp(40px, 5vw, 60px);
+    }
+
+    .markets-hero {
+        min-height: 560px;
+    }
+
+    .markets-hero h1 {
+        font-size: clamp(46px, 6vw, 72px);
+    }
+
+    .market-item {
+        grid-template-columns: 55px minmax(0, 1fr) auto;
+        gap: 25px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   TABLET — LANDSCAPE
+----------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 48px);
+    }
+
+    .neighborhoods-section {
+        padding: 90px 0;
+    }
+
+    .neighborhoods-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .neighborhood-card {
+        min-height: 300px;
+    }
+
+    .neighborhood-number {
+        margin-bottom: 45px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 28px;
+    }
+
+    .markets-hero {
+        min-height: 500px;
+        padding: 130px 0 75px;
+    }
+
+    .markets-hero h1 {
+        font-size: clamp(42px, 7vw, 62px);
+    }
+
+    .markets-list {
+        padding: 80px 0;
+    }
+
+    .market-item {
+        grid-template-columns: 50px minmax(0, 1fr);
+    }
+
+    .market-action {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 5px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   TABLET — PORTRAIT
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 40px);
+    }
+
+
+    /* Homepage */
+
+    .neighborhoods-section {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        max-width: 100%;
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(36px, 8vw, 52px);
+        line-height: 1.08;
+    }
+
+    .section-intro {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .neighborhoods-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+
+        background: transparent;
+        border: 0;
+    }
+
+    .neighborhood-card {
+        width: 100%;
+        min-height: 0;
+
+        padding: 30px;
+    }
+
+    .neighborhood-card-content {
+        min-height: 250px;
+    }
+
+    .neighborhood-number {
+        margin-bottom: 50px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 30px;
+    }
+
+    .neighborhood-card p {
+        font-size: 13px;
+    }
+
+
+    /* Markets page */
+
+    .markets-hero {
+        min-height: 500px;
+        padding: 125px 0 65px;
+    }
+
+    .markets-hero h1 {
+        font-size: clamp(40px, 9vw, 58px);
+    }
+
+    .markets-hero p:not(.section-eyebrow) {
+        font-size: 14px;
+    }
+
+    .markets-list {
+        padding: 70px 0;
+    }
+
+    .market-item {
+        display: block;
+        padding: 35px 0;
+    }
+
+    .market-number {
+        margin-bottom: 18px;
+    }
+
+    .market-content {
+        margin-bottom: 25px;
+    }
+
+    .market-content h2 {
+        font-size: clamp(32px, 8vw, 44px);
+    }
+
+    .market-content p:last-child {
+        font-size: 13px;
+    }
+
+    .market-action {
+        display: inline-flex;
+        margin: 0;
+    }
+
+    .markets-cta {
+        padding: 75px 0;
+    }
+
+}
+
+
+/* -----------------------------------------
+   LARGE PHONE
+----------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 32px);
+    }
+
+    .neighborhoods-section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(34px, 9vw, 48px);
+    }
+
+    .section-intro {
+        font-size: 13px;
+    }
+
+    .neighborhood-card {
+        padding: 26px;
+    }
+
+    .neighborhood-card-content {
+        min-height: 235px;
+    }
+
+    .neighborhood-number {
+        margin-bottom: 42px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 28px;
+    }
+
+
+    .markets-hero {
+        min-height: 470px;
+        padding: 115px 0 55px;
+    }
+
+    .markets-hero h1 {
+        font-size: clamp(36px, 10vw, 52px);
+    }
+
+    .markets-list {
+        padding: 60px 0;
+    }
+
+    .market-content h2 {
+        font-size: 34px;
+    }
+
+    .markets-cta {
+        padding: 65px 0;
+    }
+
+    .markets-cta h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   STANDARD PHONE
+----------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 28px);
+    }
+
+    .neighborhoods-section {
+        padding: 58px 0;
+    }
+
+    .section-eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.17em;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .neighborhood-card {
+        padding: 24px;
+    }
+
+    .neighborhood-card-content {
+        min-height: 220px;
+    }
+
+    .neighborhood-number {
+        margin-bottom: 38px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 26px;
+    }
+
+    .neighborhood-card p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .neighborhood-link {
+        padding-top: 22px;
+        font-size: 8px;
+    }
+
+
+    /* Markets */
+
+    .markets-hero {
+        min-height: 450px;
+        padding: 105px 0 50px;
+    }
+
+    .markets-hero h1 {
+        font-size: 36px;
+        line-height: 1.06;
+    }
+
+    .markets-hero p:not(.section-eyebrow) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .market-item {
+        padding: 30px 0;
+    }
+
+    .market-content h2 {
+        font-size: 31px;
+    }
+
+    .market-content p:last-child {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .market-action {
+        font-size: 8px;
+        letter-spacing: 0.12em;
+    }
+
+    .markets-cta {
+        padding: 60px 0;
+    }
+
+    .markets-cta h2 {
+        font-size: 36px;
+    }
+
+    .markets-cta p:not(.section-eyebrow) {
+        font-size: 13px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   SMALL PHONE — 360px / 375px
+----------------------------------------- */
+
+@media (max-width: 375px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 24px);
+    }
+
+    .neighborhoods-section {
+        padding: 50px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .section-intro {
+        font-size: 12px;
+    }
+
+    .neighborhood-card {
+        padding: 22px;
+    }
+
+    .neighborhood-card-content {
+        min-height: 210px;
+    }
+
+    .neighborhood-card h3 {
         font-size: 24px;
     }
 
-    .neighborhood-arrow {
-        right: 24px;
-        bottom: 28px;
+    .neighborhood-card p {
+        font-size: 11px;
     }
 
+    .neighborhood-link {
+        font-size: 8px;
+    }
+
+
+    .markets-hero {
+        min-height: 430px;
+        padding: 100px 0 45px;
+    }
+
+    .markets-hero h1 {
+        font-size: 32px;
+    }
+
+    .markets-hero p:not(.section-eyebrow) {
+        font-size: 12px;
+    }
+
+    .markets-list {
+        padding: 50px 0;
+    }
+
+    .market-content h2 {
+        font-size: 28px;
+    }
+
+    .market-content p:last-child {
+        font-size: 11px;
+    }
+
+    .market-action {
+        font-size: 7px;
+    }
+
+    .markets-cta {
+        padding: 50px 0;
+    }
+
+    .markets-cta h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   EXTRA SMALL — 320px
+----------------------------------------- */
+
+@media (max-width: 320px) {
+
+    .neighborhoods-inner,
+    .markets-hero-inner,
+    .markets-list-inner,
+    .markets-cta-inner {
+        width: calc(100% - 20px);
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .neighborhood-card {
+        padding: 20px;
+    }
+
+    .neighborhood-card h3 {
+        font-size: 22px;
+    }
+
+    .markets-hero h1 {
+        font-size: 29px;
+    }
+
+    .market-content h2 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   PREVENT HORIZONTAL OVERFLOW
+----------------------------------------- */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
