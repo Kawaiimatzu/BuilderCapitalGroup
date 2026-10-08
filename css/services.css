@@ -89,36 +89,37 @@
 }
 
 
-/* =========================================
-   SERVICES GRID
-========================================= */
+/* =====================================================
+   SERVICES / FINANCING GRID
+===================================================== */
+
+.services-section {
+    width: 100%;
+    padding: 90px 0;
+    background: #f7f6f2;
+}
+
+.services-inner {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+}
 
 .services-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 1px;
-
-    background: #dcdad4;
-
-    border: 1px solid #dcdad4;
+    border-top: 1px solid #d8d9d5;
+    border-left: 1px solid #d8d9d5;
 }
 
-
-/* =========================================
-   SERVICE CARD
-========================================= */
-
 .service-card {
-    position: relative;
-
-    min-height: 290px;
-
+    min-height: 292px;
     padding: 38px 34px;
 
     background: #ffffff;
+
+    border-right: 1px solid #d8d9d5;
+    border-bottom: 1px solid #d8d9d5;
 
     transition:
         background 0.3s ease,
@@ -126,13 +127,7 @@
 }
 
 .service-card:hover {
-    background: var(--navy);
-
-    color: #ffffff;
-
-    transform: translateY(-3px);
-
-    z-index: 2;
+    background: #f3f1e8;
 }
 
 .service-number {
@@ -141,56 +136,88 @@
     margin-bottom: 42px;
 
     font-family: "Manrope", sans-serif;
-
     font-size: 9px;
-
     line-height: 1;
-
     font-weight: 600;
+    letter-spacing: 0.18em;
 
-    letter-spacing: 0.16em;
-
-    color: var(--gold);
+    color: #68716b;
 }
 
-.service-title {
-    margin-bottom: 16px;
+.service-card h3 {
+    margin: 0 0 16px;
 
     font-family: "Playfair Display", serif;
-
-    font-size: 25px;
-
+    font-size: 26px;
     line-height: 1.2;
-
     font-weight: 500;
 
-    color: var(--navy);
-
-    transition: color 0.3s ease;
+    color: #1b2922;
 }
 
-.service-card:hover .service-title {
-    color: #ffffff;
-}
+.service-card p {
+    max-width: 360px;
 
-.service-text {
-    max-width: 330px;
+    margin: 0;
 
     font-family: "Manrope", sans-serif;
-
     font-size: 13px;
-
     line-height: 1.75;
+    font-weight: 400;
 
-    color: var(--text-muted);
-
-    transition: color 0.3s ease;
+    color: #68716b;
 }
 
-.service-card:hover .service-text {
-    color: rgba(255, 255, 255, 0.72);
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .services-inner {
+        width: min(100% - 48px, 700px);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .services-section {
+        padding: 60px 0;
+    }
+
+    .services-inner {
+        width: calc(100% - 32px);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 30px 26px;
+    }
+
+    .service-number {
+        margin-bottom: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+}
 
 /* =========================================
    ADVISORY SECTION
