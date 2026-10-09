@@ -1,0 +1,210 @@
+
+/* =====================================
+   NEVADA HERO
+===================================== */
+
+.nevada-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 760px;
+    min-height: 100svh;
+    padding: 150px 7% 100px;
+    overflow: hidden;
+    background: #1b2922;
+    color: #ffffff;
+}
+
+.nevada-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.nevada-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 29, 22, 0.92) 0%,
+            rgba(16, 29, 22, 0.72) 48%,
+            rgba(16, 29, 22, 0.28) 100%
+        );
+}
+
+.nevada-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.nevada-hero-content {
+    max-width: 760px;
+}
+
+.nevada-eyebrow {
+    margin: 0 0 24px;
+    color: #c2a878;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.nevada-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 6.5vw, 82px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.nevada-hero-description {
+    max-width: 540px;
+    margin: 26px 0 32px;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.nevada-hero-button,
+.nevada-intro-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-height: 54px;
+    padding: 16px 25px;
+    background: #c2a878;
+    color: #1b2922;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nevada-hero-button:hover,
+.nevada-intro-button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.nevada-hero-button span,
+.nevada-intro-button span {
+    font-size: 17px;
+}
+
+
+/* =====================================
+   NEVADA INTRO
+===================================== */
+
+.nevada-intro {
+    padding: 105px 7%;
+    background: #f6f5f0;
+}
+
+.nevada-intro-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nevada-intro h2 {
+    margin: 0;
+    color: #1b2922;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 4.5vw, 55px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.nevada-intro-inner > p:not(.nevada-eyebrow) {
+    max-width: 670px;
+    margin: 24px auto 30px;
+    color: #68716b;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+    .nevada-hero {
+        min-height: 720px;
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .nevada-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(16, 29, 22, 0.9),
+                rgba(16, 29, 22, 0.55)
+            );
+    }
+
+    .nevada-intro {
+        padding: 85px 6%;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+    .nevada-hero {
+        min-height: 680px;
+        min-height: 92svh;
+        padding: 125px 24px 75px;
+    }
+
+    .nevada-hero h1 {
+        font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .nevada-hero-description {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .nevada-hero-button {
+        width: 100%;
+    }
+
+    .nevada-intro {
+        padding: 72px 24px;
+    }
+
+    .nevada-intro h2 {
+        font-size: 36px;
+    }
+
+    .nevada-intro-inner > p:not(.nevada-eyebrow) {
+        font-size: 12px;
+    }
+}
