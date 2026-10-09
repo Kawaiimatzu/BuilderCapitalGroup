@@ -1,41 +1,28 @@
+
 /* =========================================
    ABOUT / MEET PAUL
 ========================================= */
 
 #about {
     position: relative;
-
     padding: 120px 0;
-
     background: #ffffff;
-
     overflow: hidden;
 }
-
 
 /* =========================================
    ABOUT INNER
 ========================================= */
 
 .about-inner {
-    width: min(
-        1180px,
-        calc(100% - 80px)
-    );
-
+    width: min(1180px, calc(100% - 80px));
     margin: 0 auto;
 
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(420px, 0.85fr);
-
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.85fr);
     gap: 90px;
-
     align-items: center;
 }
-
 
 /* =========================================
    ABOUT CONTENT
@@ -45,7 +32,6 @@
     max-width: 620px;
 }
 
-
 /* =========================================
    EYEBROW
 ========================================= */
@@ -54,19 +40,14 @@
     margin-bottom: 18px;
 
     font-family: "Manrope", sans-serif;
-
     font-size: 10px;
     line-height: 1.4;
-
     font-weight: 600;
-
     letter-spacing: 0.22em;
-
     text-transform: uppercase;
 
     color: var(--gold);
 }
-
 
 /* =========================================
    TITLE
@@ -76,22 +57,13 @@
     margin-bottom: 30px;
 
     font-family: "Playfair Display", serif;
-
-    font-size: clamp(
-        42px,
-        5vw,
-        64px
-    );
-
+    font-size: clamp(42px, 5vw, 64px);
     line-height: 1.05;
-
     font-weight: 500;
-
     letter-spacing: -0.02em;
 
     color: var(--navy);
 }
-
 
 /* =========================================
    TEXT
@@ -101,11 +73,8 @@
     margin-bottom: 20px;
 
     font-family: "Manrope", sans-serif;
-
     font-size: 15px;
-
     line-height: 1.9;
-
     font-weight: 400;
 
     color: var(--text-muted);
@@ -115,43 +84,35 @@
     margin-bottom: 0;
 }
 
-
 /* =========================================
    SOCIAL LINKS
 ========================================= */
 
 .about-social {
     display: flex;
-
     align-items: center;
-
+    flex-wrap: wrap;
     gap: 10px;
 
     margin-top: 34px;
 }
 
 .about-social-link {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
 
-    display: flex;
-
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
-
+    border: 1px solid #d9ddd8;
     border-radius: 50%;
 
-    font-family: "Manrope", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    color: var(--navy);
-
     background: #ffffff;
+    color: #1b2922;
+
+    text-decoration: none;
 
     transition:
         background 0.25s ease,
@@ -160,16 +121,32 @@
         transform 0.25s ease;
 }
 
-.about-social-link:hover {
-    background: var(--navy);
+.about-social-link svg {
+    display: block;
+    width: 15px;
+    height: 15px;
 
-    border-color: var(--navy);
-
-    color: #ffffff;
-
-    transform: translateY(-2px);
+    fill: currentColor;
 }
 
+.about-social-link:hover {
+    background: #1b2922;
+    border-color: #1b2922;
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.about-social-link:focus-visible {
+    outline: 2px solid #435146;
+    outline-offset: 3px;
+}
+
+/* Keep the YouTube play symbol centered */
+.about-social-link.youtube svg {
+    width: 17px;
+    height: 17px;
+}
 
 /* =========================================
    IMAGE
@@ -177,11 +154,8 @@
 
 .about-image-wrap {
     position: relative;
-
     width: 100%;
-
     overflow: hidden;
-
     background: var(--cream);
 }
 
@@ -189,44 +163,111 @@
     content: "";
 
     position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
+    inset: 0;
 
     border: 1px solid rgba(11, 22, 37, 0.08);
 
     pointer-events: none;
-
     z-index: 2;
 }
 
 .about-image {
+    display: block;
     width: 100%;
-
     height: 620px;
 
     object-fit: cover;
-
     object-position: center;
 
-    transition:
-        transform 0.6s ease;
+    transition: transform 0.6s ease;
 }
 
 .about-image-wrap:hover .about-image {
     transform: scale(1.025);
 }
 
+/* =========================================
+   HOME ABOUT ACTIONS
+========================================= */
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    margin-top: 35px;
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 145px;
+    padding: 14px 24px;
+
+    background: var(--navy);
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-button:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+.about-link {
+    position: relative;
+    padding-bottom: 5px;
+
+    color: var(--text);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.about-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(1);
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+}
+
+.about-link:hover::after {
+    transform: scaleX(0);
+}
 
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 1024px) {
-
     #about {
         padding: 100px 0;
     }
@@ -247,23 +288,19 @@
 
     .about-text {
         font-size: 14px;
-
         line-height: 1.8;
     }
 
     .about-image {
         height: 540px;
     }
-
 }
-
 
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
-
     #about {
         padding: 75px 0;
     }
@@ -272,12 +309,9 @@
         width: calc(100% - 40px);
 
         display: flex;
-
         flex-direction: column;
-
-        gap: 45px;
-
         align-items: stretch;
+        gap: 45px;
     }
 
     .about-content {
@@ -290,20 +324,18 @@
 
     .about-title {
         margin-bottom: 24px;
-
         font-size: 42px;
     }
 
     .about-text {
-        font-size: 14px;
-
-        line-height: 1.8;
-
         margin-bottom: 17px;
+        font-size: 14px;
+        line-height: 1.8;
     }
 
     .about-social {
         margin-top: 28px;
+        gap: 9px;
     }
 
     .about-image-wrap {
@@ -314,22 +346,24 @@
         height: 480px;
     }
 
+    .about-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
-
 
 /* =========================================
    SMALL MOBILE
 ========================================= */
 
 @media (max-width: 480px) {
-
     #about {
         padding: 65px 0;
     }
 
     .about-inner {
         width: calc(100% - 30px);
-
         gap: 35px;
     }
 
@@ -345,74 +379,142 @@
         height: 400px;
     }
 
+    .about-social {
+        gap: 8px;
+    }
+
+    .about-social-link {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
 }
 
 /* =========================================
-   HOME ABOUT ACTIONS
+   MEET PAUL LAYOUT FIX
 ========================================= */
 
-.about-actions {
-    display: flex;
+#about .about-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.85fr);
     align-items: center;
-    gap: 28px;
-    margin-top: 35px;
+    gap: clamp(40px, 6vw, 90px);
 }
 
-.about-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 145px;
-    padding: 14px 24px;
-    background: var(--navy);
-    color: #ffffff;
-    font-family: "Manrope", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+#about .about-content {
+    min-width: 0;
+    max-width: 620px;
 }
 
-.about-button:hover {
-    background: var(--gold);
-    transform: translateY(-2px);
-}
-
-.about-link {
-    position: relative;
-    padding-bottom: 5px;
-    color: var(--text);
-    font-family: "Manrope", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.about-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
+#about .about-image-wrap {
+    min-width: 0;
     width: 100%;
-    height: 1px;
-    background: var(--gold);
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: transform 0.25s ease;
+    align-self: center;
 }
 
-.about-link:hover::after {
-    transform: scaleX(0);
+#about .about-image {
+    display: block;
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#about .about-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 34px;
+}
+
+#about .about-social-link {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+}
+
+#about .about-social-link svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+@media (max-width: 1024px) {
+    #about .about-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+        gap: 40px;
+    }
+
+    #about .about-image {
+        height: 540px;
+    }
 }
 
 @media (max-width: 768px) {
-    .about-actions {
+    #about .about-inner {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: stretch;
+        gap: 35px;
     }
+
+    #about .about-content {
+        max-width: none;
+    }
+
+    #about .about-image {
+        height: auto;
+        max-height: 600px;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: center top;
+    }
+}
+
+/* =========================================
+   DEFAULT HEADER — DARK GREEN
+========================================= */
+
+#site-header {
+    background: #1b2922;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Keep header text white */
+#site-header .header-logo-name,
+#site-header .header-logo-subtitle,
+#site-header .header-link,
+#site-header .header-phone,
+#site-header .header-contact,
+#site-header .header-dropdown-toggle,
+#site-header .header-loan-request {
+    color: #ffffff;
+}
+
+/* Keep outlined buttons visible */
+#site-header .header-contact,
+#site-header .header-loan-request,
+#site-header .header-dropdown-toggle {
+    border-color: rgba(255, 255, 255, 0.55);
+    background: transparent;
+}
+
+/* Button hover */
+#site-header .header-contact:hover,
+#site-header .header-loan-request:hover,
+#site-header .header-dropdown-toggle:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #1b2922;
+}
+
+/* Same dark green when scrolling */
+#site-header.scrolled {
+    background: rgba(27, 41, 34, 0.97);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }

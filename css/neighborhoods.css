@@ -70,13 +70,9 @@
 
 .neighborhoods-grid {
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px;
-
     background: var(--border);
-
     border: 1px solid var(--border);
 }
 
@@ -87,17 +83,14 @@
 
 .neighborhood-card {
     display: block;
-
-    min-height: 330px;
-
+    min-width: 0;
+    min-height: 300px;
     padding: 38px 34px;
 
     background: #18352D;
     color: #ffffff;
 
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .neighborhood-card:hover {
@@ -106,18 +99,9 @@
     box-shadow: none;
 }
 
-.neighborhood-card:hover h3 {
-    color: #18352D;
-}
-
-.neighborhood-card:hover p {
-    color: #18352D;
-}
-
-.neighborhood-card:hover .neighborhood-number {
-    color: #18352D;
-}
-
+.neighborhood-card:hover h3,
+.neighborhood-card:hover p,
+.neighborhood-card:hover .neighborhood-number,
 .neighborhood-card:hover .neighborhood-link {
     color: #18352D;
 }
@@ -125,20 +109,17 @@
 .neighborhood-card-content {
     display: flex;
     flex-direction: column;
-
     height: 100%;
 }
 
 .neighborhood-number {
     display: block;
-
-    margin-bottom: 65px;
+    margin-bottom: 55px;
 
     font-family: "Manrope", sans-serif;
     font-size: 10px;
     line-height: 1.4;
     font-weight: 700;
-
     letter-spacing: 0.16em;
 
     color: #B8C9C0;
@@ -156,8 +137,7 @@
 }
 
 .neighborhood-card p {
-    max-width: 400px;
-
+    max-width: 440px;
     margin: 0;
 
     font-family: "Manrope", sans-serif;
@@ -179,15 +159,12 @@
     font-size: 9px;
     line-height: 1.4;
     font-weight: 700;
-
     letter-spacing: 0.14em;
     text-transform: uppercase;
 
     color: #ffffff;
 
-    transition:
-        color 0.25s ease,
-        gap 0.25s ease;
+    transition: color 0.25s ease, gap 0.25s ease;
 }
 
 .neighborhood-link:hover {
@@ -197,84 +174,38 @@
 
 
 /* =========================================
-   HOMEPAGE TABLET
+   TABLET
 ========================================= */
 
-@media (max-width: 1024px) {
-
-    .neighborhoods-section {
-        padding: 100px 0;
-    }
-
-    .neighborhoods-inner {
-        width: calc(100% - 60px);
-    }
-
+@media (max-width: 900px) {
     .neighborhoods-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================
-   HOMEPAGE MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .neighborhoods-section {
-        padding: 85px 0;
-    }
-
-    .neighborhoods-inner {
-        width: calc(100% - 40px);
-    }
-
-    .section-heading {
-        margin-bottom: 40px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(38px, 10vw, 54px);
-    }
-
-    .neighborhoods-grid {
-        display: flex;
-
-        overflow-x: auto;
-
-        gap: 15px;
-
-        border: 0;
-        background: transparent;
-
-        scrollbar-width: none;
-
-        scroll-snap-type: x mandatory;
-    }
-
-    .neighborhoods-grid::-webkit-scrollbar {
-        display: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .neighborhood-card {
-        flex: 0 0 82%;
-
-        min-height: 340px;
-
-        scroll-snap-align: start;
+        min-height: 280px;
+        padding: 30px 26px;
     }
 
+    .neighborhood-card h3 {
+        font-size: 32px;
+    }
+
+    .neighborhood-card p {
+        font-size: 14px;
+    }
+
+    .neighborhood-number {
+        margin-bottom: 40px;
+    }
 }
 
 
 /* =========================================
-   SMALL MOBILE
+   MOBILE
 ========================================= */
 
-@media (max-width: 480px) {
-
+@media (max-width: 600px) {
     .neighborhoods-section {
         padding: 70px 0;
     }
@@ -283,20 +214,22 @@
         width: calc(100% - 30px);
     }
 
-    .neighborhood-card {
-        min-height: 320px;
+    .neighborhoods-grid {
+        grid-template-columns: 1fr;
+    }
 
-        padding: 30px 25px;
+    .neighborhood-card {
+        min-height: 260px;
+        padding: 28px 24px;
     }
 
     .neighborhood-number {
-        margin-bottom: 55px;
+        margin-bottom: 35px;
     }
 
     .neighborhood-card h3 {
         font-size: 30px;
     }
-
 }
 
 

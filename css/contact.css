@@ -464,3 +464,72 @@ body:has(#contact) #site-header .header-contact {
         margin-bottom: 20px;
     }
 }
+
+.contact-inquiry-box {
+    width: 100%;
+    max-width: 200px;
+
+    margin-top: 20px;
+
+    min-height: 90px;
+
+    padding: 24px 28px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    border: 1px solid #d7dcd7;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-inquiry-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #1b2922;
+    text-decoration: none;
+}
+
+.contact-inquiry-link span {
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+/* HOVER */
+.contact-inquiry-box:hover {
+    background: #1b2922;
+    border-color: #1b2922;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(27, 41, 34, 0.12);
+}
+
+.contact-inquiry-box:hover .contact-inquiry-link {
+    color: #ffffff;
+}
+
+.contact-inquiry-box:hover .contact-inquiry-link span {
+    color: #ffffff;
+    transform: translateX(5px);
+}
